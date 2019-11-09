@@ -1,7 +1,9 @@
-Cookie,,,UM_distinctid=16e419fc2e53c6-0dd0e2ad150ac68-4a5b67-13c680-16e419fc2e61f5; xt=gAAAAABdwv3cRbgKLbZU9qdv4r8q8Jp8IV0yxBmzTAsq8OS51a6oYAqPK8zfeTUUbmjVldzPQZM2kVtvLSGmrbeR7_FM8piab1nTPKyRCsHKZihfiuJRc1s; xt_expires_in=604800; identity=3; access_token=gAAAAABdxhx4K0ScQHUgrPM2oZInguCvWtN6gxAcHSy0aM0wemIdcBFk19Mhb6NRxUytDXNCetU5TrvPGH3t1zYQFW1qTcOJStpPN4WWn5UI8CKH5BrHzWs
+Cookie,,,UM_distinctid=16e419fc2e53c6-0dd0e2ad150ac68-4a5b67-13c680-16e419fc2e61f5; CNZZDATA1273255756=144894613-1573053916-%7C1573302924; xt=gAAAAABdwv3cRbgKLbZU9qdv4r8q8Jp8IV0yxBmzTAsq8OS51a6oYAqPK8zfeTUUbmjVldzPQZM2kVtvLSGmrbeR7_FM8piab1nTPKyRCsHKZihfiuJRc1s; xt_expires_in=604800; identity=3; plat_id=328; org_id=84; mode=1; access_token=gAAAAABdxvOzpSbEuP8wSlse7ZcWufxtlb-jZBP6zcVpOXEdP7e6fPo71CEnbxPK79PDNDt-4GeACnYtYjgDBtrkopk7u6ENWuVRCTRFctlGny6rjwp28RA
 course_id,,,17045
-homework_id,,,114008
 term_id,,,519
 class_id,,,28909
+lesson_id,,,114870
 user,,,1710030
 passwd,,,h129100
+work_path,,,/Users/hrd/Desktop/xuetangx_work/
+homework_id,,,111678

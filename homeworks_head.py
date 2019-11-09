@@ -1,12 +1,10 @@
-import requests
-import homeworks as mains
 import homeworks_db as db
-import json
-import pdb
+import pdb, time, json, requests
 
 
 def get_courses():
     # 选择课程
+    print('<获取课程列表ing>')
     user_info = db.user_info
     url, header = get_header({
         'Referer':'manager',
@@ -36,6 +34,7 @@ def get_courses():
     return result_choice
 
 def get_lessons():
+    print('<获取题目列表ing>')
     url, header = get_header({
         'Referer': 'managecourse',
         'x-referer': 'managercourse#/manage/' + db.user_info['course_id'] + '/homework/homeworkScoreManage',
@@ -60,6 +59,7 @@ def get_lessons():
     pass
 
 def get_classes():
+    print('<获取班级列表ing>')
     url, header = get_header({
         'Referer': 'managecourse',
         'x-referer': 'managercourse#/manage/' + db.user_info['course_id'] + '/homework/homeworkScoreManage',
@@ -97,7 +97,7 @@ def get_homework(homework_id):
 
 
 def get_homeworks():
-
+    print('<获取作业列表ing>')
     url, header = get_header({
         'Referer': 'managecourse',
         'x-referer': 'managercourse#/manage/' + db.user_info['course_id'] + '/homework/homeworkScorelist/' + db.user_info['lesson_id'],
@@ -122,11 +122,8 @@ def get_homeworks():
         params['offset'] = offset * 20
         result_temp = send_data(url, params, header).text
         result_temp = json.loads(result_temp)['data']['results']
-        # print(result_temp)
-        # pdb.set_trace()
         lists += result_temp
     db.save_homework(lists)
-    # print(db.homeworks)
     return db.homeworks
     pass
 
@@ -189,9 +186,13 @@ def get_header(data, data_add = {}):
     return url, header
 
 def send_data(url, params, header):
+    time.sleep(0.2)
     return requests.get(url, params=params, headers=header)
+
+def send_data_post(url, params, header):
+    time.sleep(0.2)
+    return requests.post(url, data=params, headers=header)
 
 
 if __name__ == '__main__':
     pass
-# https://nkdx.xuetangx.com/server/api/file_from_oss?file=https://xuetangcloud-test.oss-cn-beijing.aliyuncs.com/exams/attachments-online-2019116113739522318078.jpg&filename=111.jpg

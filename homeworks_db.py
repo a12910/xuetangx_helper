@@ -7,7 +7,7 @@ user_info = {
     "term_id":'519',
     'class_id':'28909',
     'lesson_id':'114870',
-    'user':'1710030',
+    'user':'',
     'passwd':'h129100',
     'work_path':'/Users/hrd/Desktop/xuetangx_work/'
 }
@@ -36,20 +36,22 @@ def load_homework():
     for line in open("homeworks.txt", "r"):
         data.append(line)
 
-    data = []
+    data2 = []
     for item in data:
-        item = item.split(',,,')
-        data.append({
-            'id':item[0],
-            'user_name':item[1],
-            'user_number':item[2]
+        item2 = item.split(',,,')
+        data2.append({
+            'id':item2[0],
+            'user_name':item2[1],
+            'user_number':item2[2].replace('\n', '')
         })
+
     global homeworks
-    homeworks = data
+    homeworks = data2
     return data
 
 def load_conf():
     ''' 载入配置 '''
+    print('<载入配置文件>')
     data = []
     for line in open("conf.txt", "r"):
         data.append(line)
@@ -64,9 +66,15 @@ def load_conf():
     return user_info
 
 def save_conf():
+    print('<保存配置文件>')
     out_file = open("conf.txt", "w")
     for key in user_info.keys():
         out_file.write(key+',,,')
-        out_file.write(user_info[key] + '\n')
+        out_file.write(str(user_info[key]) + '\n')
     out_file.close()
+
+def init_conf():
+
+    pass
+
 

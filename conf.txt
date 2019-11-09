@@ -1,0 +1,7 @@
+Cookie,,,UM_distinctid=16e419fc2e53c6-0dd0e2ad150ac68-4a5b67-13c680-16e419fc2e61f5; xt=gAAAAABdwv3cRbgKLbZU9qdv4r8q8Jp8IV0yxBmzTAsq8OS51a6oYAqPK8zfeTUUbmjVldzPQZM2kVtvLSGmrbeR7_FM8piab1nTPKyRCsHKZihfiuJRc1s; xt_expires_in=604800; identity=3; access_token=gAAAAABdxhx4K0ScQHUgrPM2oZInguCvWtN6gxAcHSy0aM0wemIdcBFk19Mhb6NRxUytDXNCetU5TrvPGH3t1zYQFW1qTcOJStpPN4WWn5UI8CKH5BrHzWs
+course_id,,,17045
+homework_id,,,114008
+term_id,,,519
+class_id,,,28909
+user,,,1710030
+passwd,,,h129100

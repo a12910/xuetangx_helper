@@ -7,6 +7,6 @@ class_name,,,赵宏李妍周二1317
 lesson_id,,,114008
 lesson_name,,,第六次课 课后作业 赵宏老师
 homework_id,,,111678
-user,,,1710030
-passwd,,,h129100
+user,,,
+passwd,,,
 work_path,,,/Users/hrd/Desktop/xuetangx_work/

@@ -25,12 +25,21 @@ def get_courses():
 
     }
     result = send_data(url, params, header)
-    lists = json.loads(result.text)['data']['results']
+    result_text = json.loads(result.text)
+    if 'return_code' in result_text:
+        if result_text['return_code']!=200:
+            print("err")
+            print(result_text)
+            pdb.set_trace()
+            raise BaseException
+            # return
+    lists = result_text['data']['results']
     if len(lists) == 0:
-        print('err')
+        print('!没有已选择课程！')
 
-    result_choice = choose_list('course_name', 'course_id', lists, '班级序号')
+    result_choice, result_name = choose_list('course_name', 'course_id', lists, '班级序号')
     db.user_info['course_id'] = result_choice
+    db.user_info['course_name'] = result_name
     return result_choice
 
 def get_lessons():
@@ -52,9 +61,9 @@ def get_lessons():
     result = send_data(url, params, header)
     lists = json.loads(result.text)['data']['results']
 
-    result_choice = choose_list('name', 'in_id', lists, '作业序号')
-    db.user_info['homework_id'] = result_choice
-
+    result_choice, result_name = choose_list('name', 'in_id', lists, '作业序号')
+    db.user_info['lesson_id'] = result_choice
+    db.user_info['lesson_name'] = result_name
     return result_choice
     pass
 
@@ -72,10 +81,14 @@ def get_classes():
         'course_id': db.user_info['course_id'],
     }
     result = send_data(url, params, header)
+    result_text = json.loads(result.text)
+    # print(result_text)
+    # pdb.set_trace()
     lists = json.loads(result.text)['data']
 
-    result_choice = choose_list('name', 'id', lists, '班级序号')
+    result_choice, result_name = choose_list('name', 'id', lists, '班级序号')
     db.user_info['class_id'] = result_choice
+    db.user_info['class_name'] = result_name
 
     return result_choice
     pass
@@ -84,8 +97,8 @@ def get_classes():
 def get_homework(homework_id):
     url, header = get_header({
         'Referer': 'managecourse',
-        'x-referer': 'managercourse#/manage/' + db.user_info['course_id'] + '/homework/homeworkScorelist/' +
-                     db.user_info['lesson_id'] + '/' + homework_id,
+        'x-referer': 'managercourse#/manage/' + db.user_info['course_id'] + '/homework/homeworkScorelist/' + \
+                     str(db.user_info['lesson_id']) + '/' + str(homework_id),
         'url': 'admin/homework/score_correct/' + homework_id + '/'
     }, {
         'Cache-Control': 'no-cache',
@@ -142,7 +155,7 @@ def choose_list(key_note, key_out, lists, note):
         result = 0
     else:
         result = int(result)
-    return lists[result][key_out]
+    return str(lists[result][key_out]), str(lists[result][key_note])
 
 
 
@@ -187,12 +200,19 @@ def get_header(data, data_add = {}):
 
 def send_data(url, params, header):
     time.sleep(0.2)
-    return requests.get(url, params=params, headers=header)
+    result = requests.get(url, params=params, headers=header)
+    return result
 
 def send_data_post(url, params, header):
     time.sleep(0.2)
     return requests.post(url, data=params, headers=header)
 
+def dect_200(result):
+    result_head = json.loads(result.headers)
+    if result_head['return_code'] == '200':
+        return True
+    else:
+        return False
 
 if __name__ == '__main__':
     pass

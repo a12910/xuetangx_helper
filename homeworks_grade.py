@@ -79,7 +79,8 @@ def save_template():
         write_line(line2, index, wsheet1)
 
     wbook.save(work_path + '/grade_template.xls')
-    print('导出完成\n','保存至：工作路径/grade_template.xls')
+    print('导出完成\n','保存至：工作路径/grade/grade_template.xls')
+    print('请不要更改表格里面的id信息')
 
 def write_line(data, line, wsheet):
     for i in range(len(data)):

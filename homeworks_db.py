@@ -1,15 +1,21 @@
 import numpy as np
 import pdb
+import homeworks_head as heads
+import homeworks_login as login
 
 user_info = {
     "Cookie" : "",
-    "course_id":'17045',
+    "course_id":'',
+    "course_name":'',
     "term_id":'519',
-    'class_id':'28909',
-    'lesson_id':'114870',
+    'class_id':'',
+    "class_name":'',
+    'lesson_id':'',
+    "lesson_name":'',
+    'homework_id':'',
     'user':'',
-    'passwd':'h129100',
-    'work_path':'/Users/hrd/Desktop/xuetangx_work/'
+    'passwd':'',
+    'work_path':''
 }
 
 
@@ -62,19 +68,54 @@ def load_conf():
         conf[item[0]] = item[1].replace('\n', '')
 
     global user_info
+
     user_info.update(conf)
     return user_info
 
-def save_conf():
-    print('<保存配置文件>')
+def save_conf(show=True):
+    if True:
+        print('<保存配置文件>')
     out_file = open("conf.txt", "w")
     for key in user_info.keys():
         out_file.write(key+',,,')
         out_file.write(str(user_info[key]) + '\n')
     out_file.close()
 
-def init_conf():
+def init_conf(mode):
+    global user_info
 
-    pass
+    if mode == 'init':
+        if user_info['user'] == '':
+            print('<请输入用户信息>')
+            user_info['user'] = input('用户名 ')
+            user_info['passwd'] = input('密码 ')
+            user_info['work_path'] = input('工作路径')
+            login_result = login.login()
+            save_conf()
+            if not login_result:
+                init_conf(mode)
+            else:
+                heads.get_courses() # 课程列表
+                heads.get_classes() # 班级列表
+                heads.get_lessons() # 题目列表
+                save_conf()
+        else:
+            load_conf()
+    elif mode == 'change':
+        print('<请输入用户信息>')
+        user_info['user'] = input2('用户名 ', user_info['user'])
+        user_info['passwd'] = input2('密码 ', user_info['passwd'])
+        user_info['work_path'] = input2('工作路径 ', user_info['work_path'])
+        heads.get_courses()  # 课程列表
+        heads.get_classes()  # 班级列表
+        heads.get_lessons()  # 题目列表
+        save_conf()
+
+def input2(string, default):
+    temp = input(string)
+    if temp == '':
+        return default
+    else:
+        return temp
 
 

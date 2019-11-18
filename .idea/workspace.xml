@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c03c9245-5ef5-42c7-a371-bbb1e737400e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homeworks_grade.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/down_homework.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/down_homework0.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/old/homework.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/old/homework_parse1.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/old/name.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/old/out.xls" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/old/parse_grade.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf.txt" afterPath="$PROJECT_DIR$/conf.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homeworks.py" afterPath="$PROJECT_DIR$/homeworks.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homeworks.txt" afterPath="$PROJECT_DIR$/homeworks.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homeworks_db.py" afterPath="$PROJECT_DIR$/homeworks_db.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homeworks_download.py" afterPath="$PROJECT_DIR$/homeworks_download.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homeworks_head.py" afterPath="$PROJECT_DIR$/homeworks_head.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,21 +13,22 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/code$down_homework.coverage" NAME="down_homework Coverage Results" MODIFIED="1559759180218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/code$homeworks.coverage" NAME="homeworks Coverage Results" MODIFIED="1573320285651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/code$homeworks.coverage" NAME="homeworks Coverage Results" MODIFIED="1573634525460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/code$homework_parse1.coverage" NAME="homework_parse1 Coverage Results" MODIFIED="1556908642092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/code$parse_grade.coverage" NAME="parse_grade Coverage Results" MODIFIED="1559128750811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/code$test.coverage" NAME="test Coverage Results" MODIFIED="1556905661270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/code$homeworks_login.coverage" NAME="homeworks_login Coverage Results" MODIFIED="1573604373589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="homeworks.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="homeworks.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/homeworks.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+                <state relative-caret-position="420">
+                  <caret line="56" column="8" lean-forward="false" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
                   <folding>
                     <element signature="e#0#30#0" expanded="true" />
                   </folding>
@@ -49,14 +36,12 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="homeworks_head.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/homeworks_head.py">
+          <file leaf-file-name="conf.txt" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/conf.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1485">
-                  <caret line="99" column="22" lean-forward="false" selection-start-line="99" selection-start-column="22" selection-end-line="99" selection-end-column="22" />
-                  <folding>
-                    <element signature="e#0#25#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="150">
+                  <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -64,8 +49,8 @@
           <file leaf-file-name="homeworks_download.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/homeworks_download.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="412">
-                  <caret line="66" column="15" lean-forward="true" selection-start-line="66" selection-start-column="15" selection-end-line="66" selection-end-column="15" />
+                <state relative-caret-position="870">
+                  <caret line="58" column="9" lean-forward="true" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
                   <folding>
                     <element signature="e#0#25#0" expanded="true" />
                   </folding>
@@ -80,8 +65,8 @@
           <file leaf-file-name="homeworks_grade.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/homeworks_grade.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="765">
-                  <caret line="51" column="16" lean-forward="false" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+                <state relative-caret-position="1245">
+                  <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#25#0" expanded="true" />
                   </folding>
@@ -89,13 +74,37 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="homeworks_db.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="homeworks_db.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/homeworks_db.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+                <state relative-caret-position="330">
+                  <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="homeworks_login.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/homeworks_login.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="975">
+                  <caret line="65" column="23" lean-forward="false" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
+                  <folding>
+                    <element signature="e#0#24#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="homeworks_head.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/homeworks_head.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1155">
+                  <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#0#25#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -115,6 +124,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>lesson</find>
+      <find>homework_id</find>
+      <find>get_homework</find>
     </findStrings>
     <replaceStrings>
       <replace>course</replace>
@@ -135,11 +146,13 @@
         <option value="$PROJECT_DIR$/down_homework.py" />
         <option value="$PROJECT_DIR$/.idea/homeworks_head.py" />
         <option value="$PROJECT_DIR$/.idea/homeworks_download.py" />
-        <option value="$PROJECT_DIR$/homeworks_download.py" />
-        <option value="$PROJECT_DIR$/homeworks_grade.py" />
-        <option value="$PROJECT_DIR$/homeworks_head.py" />
-        <option value="$PROJECT_DIR$/homeworks_db.py" />
+        <option value="$PROJECT_DIR$/homeworks_login.py" />
         <option value="$PROJECT_DIR$/homeworks.py" />
+        <option value="$PROJECT_DIR$/homeworks_head.py" />
+        <option value="$PROJECT_DIR$/homeworks_download.py" />
+        <option value="$PROJECT_DIR$/homeworks_db.py" />
+        <option value="$PROJECT_DIR$/homeworks_grade.py" />
+        <option value="$PROJECT_DIR$/conf.txt" />
       </list>
     </option>
   </component>
@@ -229,25 +242,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="code" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="parse_grade" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -281,6 +275,25 @@
       <module name="code" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/homeworks.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="homeworks_login" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="code" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/homeworks_login.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -438,17 +451,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.down_homework" />
       <item index="1" class="java.lang.String" itemvalue="Python.homework_parse1" />
-      <item index="2" class="java.lang.String" itemvalue="Python.test" />
-      <item index="3" class="java.lang.String" itemvalue="Python.parse_grade" />
-      <item index="4" class="java.lang.String" itemvalue="Python.homeworks" />
+      <item index="2" class="java.lang.String" itemvalue="Python.parse_grade" />
+      <item index="3" class="java.lang.String" itemvalue="Python.homeworks" />
+      <item index="4" class="java.lang.String" itemvalue="Python.homeworks_login" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.homeworks" />
-        <item index="1" class="java.lang.String" itemvalue="Python.down_homework" />
-        <item index="2" class="java.lang.String" itemvalue="Python.parse_grade" />
-        <item index="3" class="java.lang.String" itemvalue="Python.homework_parse1" />
-        <item index="4" class="java.lang.String" itemvalue="Python.test" />
+        <item index="1" class="java.lang.String" itemvalue="Python.homeworks_login" />
+        <item index="2" class="java.lang.String" itemvalue="Python.down_homework" />
+        <item index="3" class="java.lang.String" itemvalue="Python.parse_grade" />
+        <item index="4" class="java.lang.String" itemvalue="Python.homework_parse1" />
       </list>
     </recent_temporary>
   </component>
@@ -466,7 +479,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2567376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -727,20 +740,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homeworks_head.py">
+    <entry file="file://$PROJECT_DIR$/index.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homeworks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1485">
-          <caret line="99" column="22" lean-forward="false" selection-start-line="99" selection-start-column="22" selection-end-line="99" selection-end-column="22" />
+        <state relative-caret-position="420">
+          <caret line="56" column="8" lean-forward="false" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
           <folding>
-            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homeworks_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/homeworks_download.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="66" column="15" lean-forward="true" selection-start-line="66" selection-start-column="15" selection-end-line="66" selection-end-column="15" />
+        <state relative-caret-position="870">
+          <caret line="58" column="9" lean-forward="true" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
@@ -749,31 +777,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/homeworks_grade.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="51" column="16" lean-forward="false" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+        <state relative-caret-position="1245">
+          <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homeworks_db.py">
+    <entry file="file://$PROJECT_DIR$/homeworks_login.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+        <state relative-caret-position="975">
+          <caret line="65" column="23" lean-forward="false" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homeworks.py">
+    <entry file="file://$PROJECT_DIR$/homeworks_head.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+        <state relative-caret-position="1155">
+          <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#0#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>

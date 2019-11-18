@@ -5,13 +5,13 @@ import sys, math, requests, os
 
 def down_main():
     work_path = mkdir(db.user_info['work_path'] + 'download')
-
+    work_path = mkdir(work_path + '/' + db.user_info['lesson_name'])
     index = -1
     for item in db.homeworks:
         index += 1
         work_path2 = mkdir(work_path + '/' + item['user_number'] + ' ' + item['user_name'])
 
-        homework_id = item['id']
+        homework_id = str(item['id'])
 
         results = head.get_homework(homework_id)
         for result in results:
@@ -34,7 +34,7 @@ def down_main():
                 out_path = work_path3 + '/' + atta['file_name']
                 download_file(down_path2, out_path, atta['file_name'] + ' ')
 
-
+    print('<下载完成>')
 
 def download_file(file_url, file_path, string):
     print(string)

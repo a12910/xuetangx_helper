@@ -39,15 +39,15 @@ def main2():
     db.load_conf()
     # db.init_conf('init')
     # get_cookie()
-    # login.login()
+    login.login()
     # heads.init_login()
     # heads.get_courses() # 课程列表
     # heads.get_classes() # 班级列表
     # heads.get_lessons() # 题目列表
-    heads.get_homeworks() # 作业列表
-    db.load_homework()
+    # heads.get_homeworks() # 作业列表
+    # db.load_homework()
     # hgrade.save_template()  # 保存列表
-    hgrade.load_template() # 上传列表
+    # hgrade.load_template() # 上传列表
 
     # hdown.down_main() # 下载
     # print(heads.get_homework('5799170'))
@@ -57,4 +57,4 @@ def main2():
     pass
 
 if __name__ == '__main__':
-    main2()
+    main()

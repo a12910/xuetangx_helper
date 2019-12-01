@@ -203,6 +203,7 @@ def get_header(data, data_add = {}):
     }
     url = 'https://nkdx.xuetangx.com/' + data['url']
     header.update(data_add)
+    # print(header['Cookie'])
     return url, header
 
 def send_data(url, params, header):

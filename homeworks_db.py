@@ -16,7 +16,8 @@ user_info = {
     'homework_id':'',
     'user':'',
     'passwd':'',
-    'work_path':''
+    'work_path':'',
+    'temp_cookie':''
 }
 
 
@@ -108,12 +109,12 @@ def init_conf(mode):
 
     load_conf()
     if mode == 'init':
-        if user_info['work_path'] == '':
+        if user_info['work_path'] == '' or not login.login_test():
             print('<请输入用户信息>')
-            user_info['user'] = input('用户名 ')
-            user_info['passwd'] = input('密码 ')
-            user_info['work_path'] = input('工作路径 ')
-            login_result = login.login()
+            user_info['user'] = input2('用户名 ', user_info['user'])
+            user_info['passwd'] = input2('密码 ', user_info['passwd'])
+            user_info['work_path'] = input2('工作路径 ', user_info['work_path'])
+            login_result = login.login('new')
             save_conf()
             if not login_result:
                 init_conf(mode)

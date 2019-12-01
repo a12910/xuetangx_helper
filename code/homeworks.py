@@ -1,3 +1,5 @@
+""" 主程序 """
+
 import homeworks_head as heads
 import homeworks_db as db
 import homeworks_download as hdown
@@ -24,9 +26,11 @@ def main():
         heads.get_homeworks()
         hdown.down_main()
     elif temp == 3:
-        hgrade.load_template()
-    elif temp == 4:
+        heads.get_homeworks()
         hgrade.save_template()
+    elif temp == 4:
+        heads.get_homeworks()
+        hgrade.load_template()
     elif temp == 5:
         print('Bye~')
     else:
@@ -39,15 +43,16 @@ def main2():
     # get_cookie()
     login.login()
     # heads.init_login()
-    heads.get_courses() # 课程列表
+    # heads.get_courses() # 课程列表
     # heads.get_classes() # 班级列表
     # heads.get_lessons() # 题目列表
     # heads.get_homeworks() # 作业列表
     # db.load_homework()
-    # hgrade.load_template()
-    # hgrade.save_template()
-    # hdown.down_main()
-    # heads.get_homework('7245062')
+    # hgrade.save_template()  # 保存列表
+    # hgrade.load_template() # 上传列表
+
+    # hdown.down_main() # 下载
+    # print(heads.get_homework('5799170'))
     # login.parse_index()
 
     db.save_conf()

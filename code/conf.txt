@@ -1,0 +1,11 @@
+Cookie,,,plat_id=328;org_id=84;mode=1;UM_distinctid=16ec07944718f-022435fb5b40488-4b536e-100200-16ec07944722a7;CNZZDATA1273255756=1875587733-1575184341-https%253A%252F%252Fnkdx.xuetangx.com%252F%7C1575184341;expires=Mon, 13 Oct 1975 03:13:00 GMT;access_token=gAAAAABd43MJUBjlORGfW_AQZMtGRiELCjJnPFk9E263sjFL96Ea4Wwgb4vT4Iq1OsIYWoofT-yblpngMi7lJT68p7GnEl_u_IJHjnDfIOdtsRj4QZtJNWg; domain=xuetangx.com;xt=gAAAAABd43MJbxQ83GSxuEEvUSLllpo3UZnFX7MPVtddlp-8ZHXklFwKWAhOia7YsI7Iya1cOz0XR1yq7GeSiMl8H_DWMZ308H02EwWW1lxJDKh-jDeCxFg;xt_expires_in=604800;identity=3
+course_id,,,17045
+course_name,,,程序设计基础
+term_id,,,519
+class_id,,,28909
+class_name,,,赵宏李妍周二1317
+lesson_id,,,111678
+lesson_name,,,第四次课 课后作业 赵宏老师
+homework_id,,,
+work_path,,,/Users/hrd/Desktop/xuetangx_work/
+temp_cookie,,,{'plat_id': '328', 'org_id': '84', 'mode': '1', 'UM_distinctid': '16ec07944718f-022435fb5b40488-4b536e-100200-16ec07944722a7', 'CNZZDATA1273255756': '1875587733-1575184341-https%253A%252F%252Fnkdx.xuetangx.com%252F%7C1575184341', '  expires': 'Mon, 13 Oct 1975 03:13:00 GMT', '  access_token': 'gAAAAABd43MJUBjlORGfW_AQZMtGRiELCjJnPFk9E263sjFL96Ea4Wwgb4vT4Iq1OsIYWoofT-yblpngMi7lJT68p7GnEl_u_IJHjnDfIOdtsRj4QZtJNWg', ' domain': 'xuetangx.com', '  xt': 'gAAAAABd43MJbxQ83GSxuEEvUSLllpo3UZnFX7MPVtddlp-8ZHXklFwKWAhOia7YsI7Iya1cOz0XR1yq7GeSiMl8H_DWMZ308H02EwWW1lxJDKh-jDeCxFg', '  xt_expires_in': '604800', '  identity': '3'}

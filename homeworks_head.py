@@ -1,4 +1,5 @@
 import homeworks_db as db
+import homeworks_login as login
 import pdb, time, json, requests
 
 
@@ -28,11 +29,17 @@ def get_courses():
     result_text = json.loads(result.text)
     if 'return_code' in result_text:
         if result_text['return_code']!=200:
-            print("err")
-            print(result_text)
-            pdb.set_trace()
-            raise BaseException
+            # print("err")
+            # print(result_text)
+            # pdb.set_trace()
+            # raise BaseException
             # return
+            print('<重新登陆>')
+            pdb.set_trace()
+            login.login()
+            result = send_data(url, params, header)
+            result_text = json.loads(result.text)
+
     lists = result_text['data']['results']
     if len(lists) == 0:
         print('!没有已选择课程！')
@@ -59,13 +66,13 @@ def get_lessons():
         'offset':'0'
     }
     result = send_data(url, params, header)
+    print(result.text)
     lists = json.loads(result.text)['data']['results']
 
     result_choice, result_name = choose_list('name', 'in_id', lists, '作业序号')
     db.user_info['lesson_id'] = result_choice
     db.user_info['lesson_name'] = result_name
     return result_choice
-    pass
 
 def get_classes():
     print('<获取班级列表ing>')
@@ -99,7 +106,7 @@ def get_homework(homework_id):
         'Referer': 'managecourse',
         'x-referer': 'managercourse#/manage/' + db.user_info['course_id'] + '/homework/homeworkScorelist/' + \
                      str(db.user_info['lesson_id']) + '/' + str(homework_id),
-        'url': 'admin/homework/score_correct/' + homework_id + '/'
+        'url': 'admin/homework/score_correct/' + str(homework_id) + '/'
     }, {
         'Cache-Control': 'no-cache',
     })
@@ -122,12 +129,13 @@ def get_homeworks():
     params = {
         'product_id': db.user_info['course_id'],
         'class_id':db.user_info['class_id'],
-        'homework_id':db.user_info['homework_id'],
+        'homework_id':db.user_info['lesson_id'],
         'limit':'20',
         'offset':'0'
     }
     result = send_data(url, params, header)
     result_text = json.loads(result.text)
+    # print(result_text)
     main_count = int(result_text['data']['count'])
     lists = []
     lists += result_text['data']['results']
@@ -138,7 +146,6 @@ def get_homeworks():
         lists += result_temp
     db.save_homework(lists)
     return db.homeworks
-    pass
 
 
 def choose_list(key_note, key_out, lists, note):

@@ -29,9 +29,9 @@ def parse_index():
     from PIL import Image
     im = Image.open('index.png')
     im.show()
-    print('<正在登陆>')
-    index = input('请输入验证码 ').replace('\n','')
 
+    index = input('请输入验证码 ').replace('\n','')
+    print('<正在登陆>')
     return index, result_text['data']['captcha_key']
 
 def login():

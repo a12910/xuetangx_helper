@@ -1,12 +1,10 @@
-Cookie,,,UM_distinctid=16e419fc2e53c6-0dd0e2ad150ac68-4a5b67-13c680-16e419fc2e61f5;CNZZDATA1273255756=144894613-1573053916-%7C1573628340;plat_id=328;org_id=84;mode=1;access_token=gAAAAABdy7-n99XEC-gDqQNG-7aFLwIhsh2pBa-K-YVBDUSu7sORf_pR6Tm7cqufGHn2zDG1S5RfGrxk1T8s8b_cvfu8pzOcJHi1nly0r_KCIy7P8nDD6Uw;xt=gAAAAABdy7clvN3llgNqcKrhyE_ZvUO06SdPvVbZy0OpJg49pqvcNUj_5kgNmAjIZSSaYRiiotIBTLwWIhfRTvNmCD7NIf_Me8R_qEXX4kizwv0yPsOT0LM;xt_expires_in=604800;identity=3;path=/;expires=Mon,13Oct197503:13:00GMT;domain=xuetangx.com;httponly,xt=gAAAAABdy7-nYE8goQn5JlXKcS-BGoob1FGcA52kACf4-AdIBbjIvR7GboFUxwDdZungNa-WYYXupDtyBbZbSPg7OVfcTrDN6hzaptmLyAaKOuSxYTL24M4;httponly,xt_expires_in=604800;httponly,identity=3
+Cookie,,,UM_distinctid=16e419fc2e53c6-0dd0e2ad150ac68-4a5b67-13c680-16e419fc2e61f5; CNZZDATA1273255756=144894613-1573053916-%7C1575162741; plat_id=328; org_id=84; mode=1; xt=gAAAAABd4lga0z29kzWAZyfyAwwlU-y-p9Aq5zJ2jx8XeG1lbKMMIxKqJZmxPDWVQgVsSBTxRBda06pz1ijT06ABctnz3HR3kbTRsDY_D-PsORBiLUQuilg; xt_expires_in=604800; identity=3; access_token=gAAAAABd4yJJh7ScydTjZvzhlkrkNn6wm5N3LGQCF5et1yGiT35jgsx4HWmSOnSeqERDdLPwm4O9Tl2xGT10GPLy8yteBUimN2GpG9rbjVlLNtfxtQPvubE
 course_id,,,17045
 course_name,,,程序设计基础
 term_id,,,519
 class_id,,,28909
 class_name,,,赵宏李妍周二1317
-lesson_id,,,114008
-lesson_name,,,第六次课 课后作业 赵宏老师
-homework_id,,,111678
-user,,,
-passwd,,,
+lesson_id,,,111678
+lesson_name,,,第四次课 课后作业 赵宏老师
+homework_id,,,
 work_path,,,/Users/hrd/Desktop/xuetangx_work/

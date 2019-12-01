@@ -5,10 +5,12 @@ import homeworks_download as hdown
 import json, xlwt, xlrd, copy
 
 def send_grade(homework_id, data):
+    # print(data)
     url, header = head.get_header({
         'Referer': 'managecourse',
-        'x-referer': 'managercourse#/manage/' + db.user_info['course_id'] + '/homework/homeworkNewScore/' + db.user_info['lesson_id'] + '/' + homework_id,
-        'url': 'admin/homework/score_correct/' + homework_id + '/'
+        'x-referer': 'managercourse#/manage/' + db.user_info['course_id'] + \
+                     '/homework/homeworkNewScore/' + db.user_info['lesson_id'] + '/' + str(homework_id),
+        'url': 'admin/homework/score_correct/' + str(int(homework_id)) + '/'
     }, {
         'Cache-Control': 'no-cache',
         'Content-Type': 'application/json;charset = utf-8',
@@ -23,6 +25,7 @@ def send_grade(homework_id, data):
     result_text = json.loads(result.text)
     # print(result_text)
     return result_text['code']
+
 
 def load_template():
     print('<上传成绩模板>')
@@ -40,7 +43,9 @@ def load_template():
                 'comment':sheet1.cell(row, ques*3+5).value
             }
             if grades['comment'] == '':
-                grades['comment'] = grades['id']
+                grades['comment'] = '~'
+                # grades['comment'] = grades['id']
+                pass
             data.append(copy.deepcopy(grades))
         homework_id = sheet1.cell(row, 2).value
         name = sheet1.cell(row, 0).value
@@ -50,6 +55,7 @@ def load_template():
         if result == 0:
             print(row, name, [x['grade'] for x in data], '已上传')
     print('上传完成!')
+
 
 def save_template():
     print('<导出成绩填写模板>')
@@ -82,11 +88,10 @@ def save_template():
     print('导出完成\n','保存至：工作路径/grade/grade_template.xls')
     print('请不要更改表格里面的id信息')
 
+
 def write_line(data, line, wsheet):
     for i in range(len(data)):
         wsheet.write(line, i, data[i])
-
-
 
 
 if __name__ == '__main__':

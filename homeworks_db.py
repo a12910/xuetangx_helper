@@ -1,7 +1,8 @@
 import numpy as np
-import pdb
+import pdb, os
 import homeworks_head as heads
 import homeworks_login as login
+import homeworks_download as hdown
 
 user_info = {
     "Cookie" : "",
@@ -46,9 +47,9 @@ def load_homework():
     for item in data:
         item2 = item.split(',,,')
         data2.append({
-            'id':item2[0],
+            'id':str(item2[0]),
             'user_name':item2[1],
-            'user_number':item2[2].replace('\n', '')
+            'user_number':str(item2[2].replace('\n', ''))
         })
 
     global homeworks
@@ -59,10 +60,24 @@ def load_conf():
     ''' 载入配置 '''
     print('<载入配置文件>')
     data = []
-    for line in open("conf.txt", "r"):
-        data.append(line)
-
+    if os.path.exists('conf.txt'):
+        for line in open("conf.txt", "r"):
+            data.append(line)
+    else:
+        temp_file = open("conf.txt", 'w')
+        temp_file.close()
+        return {}
     conf = {}
+    for item in data:
+        item = item.split(',,,')
+        conf[item[0]] = item[1].replace('\n', '')
+
+    if not 'work_path' in conf.keys():
+        return {}
+
+    data = []
+    for line in open(conf['work_path'] + "/conf/user.txt", "r"):
+        data.append(line)
     for item in data:
         item = item.split(',,,')
         conf[item[0]] = item[1].replace('\n', '')
@@ -73,23 +88,31 @@ def load_conf():
     return user_info
 
 def save_conf(show=True):
-    if True:
+    if show:
         print('<保存配置文件>')
     out_file = open("conf.txt", "w")
+    hdown.mkdir(user_info['work_path'] + '/conf')
+    out_file2 = open(user_info['work_path'] + '/conf/user.txt', "w")
     for key in user_info.keys():
-        out_file.write(key+',,,')
-        out_file.write(str(user_info[key]) + '\n')
+        if not key in ['user', 'passwd']:
+            out_file.write(key+',,,')
+            out_file.write(str(user_info[key]) + '\n')
+        else:
+            out_file2.write(key + ',,,')
+            out_file2.write(str(user_info[key]) + '\n')
     out_file.close()
+    out_file2.close()
 
 def init_conf(mode):
     global user_info
 
+    load_conf()
     if mode == 'init':
-        if user_info['user'] == '':
+        if user_info['work_path'] == '':
             print('<请输入用户信息>')
             user_info['user'] = input('用户名 ')
             user_info['passwd'] = input('密码 ')
-            user_info['work_path'] = input('工作路径')
+            user_info['work_path'] = input('工作路径 ')
             login_result = login.login()
             save_conf()
             if not login_result:
@@ -99,8 +122,7 @@ def init_conf(mode):
                 heads.get_classes() # 班级列表
                 heads.get_lessons() # 题目列表
                 save_conf()
-        else:
-            load_conf()
+
     elif mode == 'change':
         print('<请输入用户信息>')
         user_info['user'] = input2('用户名 ', user_info['user'])

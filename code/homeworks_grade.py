@@ -1,3 +1,5 @@
+""" 成绩相关 """
+
 import homeworks_db as db
 import homeworks_head as head
 import homeworks_download as hdown
@@ -5,6 +7,7 @@ import homeworks_download as hdown
 import json, xlwt, xlrd, copy
 
 def send_grade(homework_id, data):
+    """ 上传单次成绩 """
     # print(data)
     url, header = head.get_header({
         'Referer': 'managecourse',
@@ -28,6 +31,7 @@ def send_grade(homework_id, data):
 
 
 def load_template():
+    """ 上传成绩 """
     print('<上传成绩模板>')
     work_path = hdown.mkdir(db.user_info['work_path'] + 'grade')
     wbook = xlrd.open_workbook(work_path + '/grade_template.xls')
@@ -58,6 +62,7 @@ def load_template():
 
 
 def save_template():
+    """ 导出成绩模板 """
     print('<导出成绩填写模板>')
     if len(db.homeworks) == 0:
         db.load_homework()

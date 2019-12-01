@@ -1,3 +1,5 @@
+""" 主程序 """
+
 import homeworks_head as heads
 import homeworks_db as db
 import homeworks_download as hdown
@@ -25,10 +27,10 @@ def main():
         hdown.down_main()
     elif temp == 3:
         heads.get_homeworks()
-        hgrade.load_template()
+        hgrade.save_template()
     elif temp == 4:
         heads.get_homeworks()
-        hgrade.save_template()
+        hgrade.load_template()
     elif temp == 5:
         print('Bye~')
     else:

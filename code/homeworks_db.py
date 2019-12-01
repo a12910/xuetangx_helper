@@ -1,3 +1,5 @@
+""" 数据配置相关程序 """
+
 import numpy as np
 import pdb, os
 import homeworks_head as heads
@@ -89,6 +91,7 @@ def load_conf():
     return user_info
 
 def save_conf(show=True):
+    """ 保存配置 """
     if show:
         print('<保存配置文件>')
     out_file = open("conf.txt", "w")
@@ -105,6 +108,7 @@ def save_conf(show=True):
     out_file2.close()
 
 def init_conf(mode):
+    """ 初始化配置 """
     global user_info
 
     load_conf()

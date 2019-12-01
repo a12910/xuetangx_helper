@@ -1,9 +1,12 @@
+""" 作业下载相关程序 """
+
 import homeworks_db as db
 import homeworks_head as head
 from contextlib import closing
 import sys, math, requests, os
 
 def down_main():
+    """ 下载主程序 """
     work_path = mkdir(db.user_info['work_path'] + 'download')
     work_path = mkdir(work_path + '/' + db.user_info['lesson_name'])
     index = -1
@@ -37,6 +40,7 @@ def down_main():
     print('<下载完成>')
 
 def download_file(file_url, file_path, string):
+    """ 下载文件模块 """
     print(string)
     with closing(requests.get(file_url, stream=True)) as response:
         chunk_size = 1024  # 单次请求最大值
@@ -51,7 +55,8 @@ def download_file(file_url, file_path, string):
 
                 # print("\r 文件下载进度：%d%%(%d/%d) - %s" % (now_jd, data_count, content_size, file_path), end=" ")
 
-def processBar(num, total):  # 进度条
+def processBar(num, total):
+    """ 进度条 """
     rate = num / total
     rate_num = int(rate * 100)
     if rate_num == 100:

@@ -68,7 +68,7 @@ def get_lessons():
         'offset':'0'
     }
     result = send_data(url, params, header)
-    print(result.text)
+    # print(result.text)
     lists = json.loads(result.text)['data']['results']
 
     result_choice, result_name = choose_list('name', 'in_id', lists, '作业序号')
@@ -118,7 +118,7 @@ def get_homework(homework_id):
     return result
 
 
-def get_homeworks():
+def get_homeworks(skip=0):
     print('<获取作业列表ing>')
     url, header = get_header({
         'Referer': 'managecourse',
@@ -146,7 +146,7 @@ def get_homeworks():
         result_temp = send_data(url, params, header).text
         result_temp = json.loads(result_temp)['data']['results']
         lists += result_temp
-    db.save_homework(lists)
+    db.save_homework(lists[skip:])
     return db.homeworks
 
 

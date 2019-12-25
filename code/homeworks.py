@@ -46,12 +46,12 @@ def main2():
     # heads.get_courses() # 课程列表
     # heads.get_classes() # 班级列表
     # heads.get_lessons() # 题目列表
-    # heads.get_homeworks() # 作业列表
+    heads.get_homeworks() # 作业列表
     # db.load_homework()
     # hgrade.save_template()  # 保存列表
     # hgrade.load_template() # 上传列表
 
-    # hdown.down_main() # 下载
+    hdown.down_main() # 下载
     # print(heads.get_homework('5799170'))
     # login.parse_index()
 

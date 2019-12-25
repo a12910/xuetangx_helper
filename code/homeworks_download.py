@@ -3,7 +3,7 @@
 import homeworks_db as db
 import homeworks_head as head
 from contextlib import closing
-import sys, math, requests, os
+import sys, math, requests, os, pdb
 
 def down_main():
     """ 下载主程序 """
@@ -22,8 +22,12 @@ def down_main():
                 work_path3 = work_path2
             else:
                 work_path3 = mkdir(work_path2 + '/' + str(index))
+            if 'attachments' in result.keys():
+                attachments = result['attachments']
+            else:
+                attachments = []
 
-            attachments = result['attachments']
+                pdb.set_trace()
             outfile = open(work_path3 + '/answer.txt', 'w')
             text = result['answer']
             for ans in text:
@@ -44,16 +48,21 @@ def download_file(file_url, file_path, string):
     print(string)
     with closing(requests.get(file_url, stream=True)) as response:
         chunk_size = 1024  # 单次请求最大值
-        content_size = int(response.headers['content-length'])  # 内容体总大小
+        try:
+            content_size = int(response.headers['content-length'])  # 内容体总大小
+        except BaseException:
+            content_size = 10 **5
+
         data_count = 0
         with open(file_path, "wb") as file:
             for data in response.iter_content(chunk_size=chunk_size):
                 file.write(data)
                 data_count = int(data_count + len(data))
                 processBar(data_count, content_size)
-                # now_jd = (data_count / content_size) * 100
+                    # now_jd = (data_count / content_size) * 100
 
-                # print("\r 文件下载进度：%d%%(%d/%d) - %s" % (now_jd, data_count, content_size, file_path), end=" ")
+                    # print("\r 文件下载进度：%d%%(%d/%d) - %s" % (now_jd, data_count, content_size, file_path), end=" ")
+
 
 def processBar(num, total):
     """ 进度条 """

@@ -43,44 +43,18 @@ for root, dirs, files in os.walk(paths):
                     line[o] = 5
             grade = numpy.array(line[1:6] + [1], dtype=float)
             if not name in results.keys():
-                print(name, grade)
-            else:
-                results[name] += grade
+                print('no name', name, grade)
+                results[name] = numpy.array([0,0,0,0,0,  0], dtype=float)
+            results[name] += grade
 
-            """
-            sum = [0,0,0,0,0]
-            
-            for p in range(1, 6):
-                if line[p] == '' or int(line[p]) == 0 :
-                    sum[p-1] = 5
-                else:
-                    sum[p-1]=line[p]
-            for y in range(len(names)):
-                if names[y]['name'] == line[0]:
-                    u = names[y]['grade']
-                    u.append(sum)
-                    names[y]['grade']=u
-                    # print names[y]
-                    break
-            """
-"""
-for i in range(len(names)):
-    # if names[i]['count'] != 0:
-    #     names[i]['grade'] = round(names[i]['grade'] / names[i]['count'], 2)
-    for w in range(5):
-        sum = 0
-        for p in range(len(names[i])):
-            sum += names[i]['grade'][p][w]
-        if len(names[i]['grade']) == 0:
-            names[i]['average'][w] = 0
-        else:
-            names[i]['average'][w] = sum/len(names[i]['grade'])
-    # print(names[i])
-"""
+
 out = xlwt.Workbook(encoding='UTF-8')
 ws = out.add_sheet('out grade')
-for e in range(len(names)):
-    nn = names[e]
+# for e in range(len(names)):
+e = 0
+for nn in results.keys():
+    # nn = names[e]
+    e += 1
     if nn == '':
         continue
     print (nn, results[nn])

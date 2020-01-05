@@ -22,6 +22,7 @@ def main():
     temp = int(input('选择 '))
     if temp == 1:
         db.init_conf('change')
+
     elif temp == 2:
         heads.get_homeworks()
         hdown.down_main()

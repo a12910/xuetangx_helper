@@ -1,0 +1,11 @@
+Cookie,,,plat_id=328;org_id=84;mode=1;UM_distinctid=16f1e932beda-0c77d6215de4f-4b536e-100200-16f1e932bee422;CNZZDATA1273255756=893333092-1576764603-%https%253A%252F%252Fnkdx.xuetangx.com%252F7C1576764603; path=/, mode=1;expires=Mon, 13 Oct 1975 03:13:00 GMT;access_token=gAAAAABd-4oS5eqr4g8tSNPjiNBZBCau0hmClVhWwwkI3olL-BVzf2z48M-czovYPPBqnSekctT8sDrqS9E8chHiu6ktFEhtx170uX9r3NTw6mJFwrBCYZ8; domain=xuetangx.com;xt=gAAAAABd-4oSsZ8CfB_a1KuWrATisseKmnk6PtrZHvHI-SlLRdvM0iCwRinxQ2Hg5E0VVSGP9_XRdreHayzoSxfVUM7CAdqDOeUK1KuruJJbjAmdRxsFuA4;xt_expires_in=604800;identity=3
+course_id,,,
+course_name,,,
+term_id,,,519
+class_id,,,
+class_name,,,
+lesson_id,,,
+lesson_name,,,
+homework_id,,,
+work_path,,,/Users/hrd/Desktop/xuetangx_work/
+temp_cookie,,,{'plat_id': '328', 'org_id': '84', 'mode': '1', 'UM_distinctid': '16f1e932beda-0c77d6215de4f-4b536e-100200-16f1e932bee422', 'CNZZDATA1273255756': '893333092-1576764603-%https%253A%252F%252Fnkdx.xuetangx.com%252F7C1576764603', ' path': '/, mode=1', '  expires': 'Mon, 13 Oct 1975 03:13:00 GMT', '  access_token': 'gAAAAABd-4oS5eqr4g8tSNPjiNBZBCau0hmClVhWwwkI3olL-BVzf2z48M-czovYPPBqnSekctT8sDrqS9E8chHiu6ktFEhtx170uX9r3NTw6mJFwrBCYZ8', ' domain': 'xuetangx.com', '  xt': 'gAAAAABd-4oSsZ8CfB_a1KuWrATisseKmnk6PtrZHvHI-SlLRdvM0iCwRinxQ2Hg5E0VVSGP9_XRdreHayzoSxfVUM7CAdqDOeUK1KuruJJbjAmdRxsFuA4', '  xt_expires_in': '604800', '  identity': '3'}
